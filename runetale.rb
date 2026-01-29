@@ -11,7 +11,7 @@ class Runetale < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/runetale/runetale/releases/download/v0.0.24/runetale_0.0.24_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d3ddbb94144a0d0dd30ff2043c2832886f99b83ffb0fc29d2ef4097ebe9a5be2"
+      sha256 "2487fec7723a647589d4f47557b187b7573a819be7f6ea1985bf618f9c517302"
 
       def install
         bin.install "runetale"
@@ -19,7 +19,7 @@ class Runetale < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.24/runetale_0.0.24_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0f47ae2794c4f1f3155bd26c9d67c2fef02ae65f0b0e790fcfa58e93da8f6b6a"
+      sha256 "fa5f6d851c5b54211d7611b26902127d045e3cbc3ecdf6810a44bc9db6d01ec0"
 
       def install
         bin.install "runetale"
@@ -30,7 +30,7 @@ class Runetale < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.24/runetale_0.0.24_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0577419147737ace6c8ab2dbf701eb7c6da9c5fc98af6cc6fb205f14ebbdd4cf"
+      sha256 "241961da471208a6dd1664171cf9b80ab1fb30fa9ff00255917ae5d55f9123dc"
 
       def install
         bin.install "runetale"
@@ -38,7 +38,7 @@ class Runetale < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.24/runetale_0.0.24_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "c37e49ec2e39d07d52313bf7bc62e49e771e7f540ad715514406d9ed2dc139f3"
+      sha256 "e16029379e19e6023b45fb5b4ef985999fd7c2b44dd501b1d230f70d17e80025"
 
       def install
         bin.install "runetale"
@@ -46,7 +46,7 @@ class Runetale < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.24/runetale_0.0.24_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "29b011775497beb5d3e1c5d8da70ff31c14bc9d20acac48b4d897604c62d33fa"
+      sha256 "935adcb48155fa4520906c0d0f416a77b76d4c54bf3e9a7c976da7f95850d225"
 
       def install
         bin.install "runetale"
