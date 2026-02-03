@@ -5,21 +5,21 @@
 class Runetale < Formula
   desc "P2P mesh network using WireGuard"
   homepage "https://runetale.com/"
-  version "0.0.25"
+  version "0.0.26"
   license "BSD3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.25/runetale_0.0.25_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4ad5f3399074988d85c8311cb94268916e4ec8623d23f17ee2b443e786d91264"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.26/runetale_0.0.26_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c8ae404af61d8a7bb29502a3f858cdfd6de7b0e47c8ef5a4cf1f5ad7160efd9e"
 
       def install
         bin.install "runetale"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.25/runetale_0.0.25_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8052e1a9f9f6df0a323bd9946c508119c7b4bc61aa35ff9e23adf3348185e4cf"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.26/runetale_0.0.26_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cf27dc5971ad043f000d7b31e6222d5611b338040d67703b9ada02fea7a36b8e"
 
       def install
         bin.install "runetale"
@@ -28,25 +28,25 @@ class Runetale < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.25/runetale_0.0.25_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "134c98a3d42cbe673d7d134047b16eedc96901d6a46a3d976921efb132924d46"
-
-      def install
-        bin.install "runetale"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.25/runetale_0.0.25_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "fd066629ef24b5d2c0d1c67f80ade8d7c5266484ff652a6937326f6cdd683696"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.26/runetale_0.0.26_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "9b95b74d7ea3ae98eedb71722d8508b23dbda61cd2ec87ee477926dddc5457ea"
 
       def install
         bin.install "runetale"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.25/runetale_0.0.25_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cf6c60125b4b25d258de56a03a1e4ff5503848a64f13296dfc8bbda2636bd0e8"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.26/runetale_0.0.26_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d2fd3024d29defdf0bed301bc15e02f7f514c389db341a04f873da89f6f6abcb"
+
+      def install
+        bin.install "runetale"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.26/runetale_0.0.26_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1e4e8061d05c00ade3df75a552cbafd208f5a8eeaaf87e4150e3a9ccdabebc32"
 
       def install
         bin.install "runetale"
