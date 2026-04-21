@@ -11,7 +11,7 @@ class Runetaled < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.1/runetaled_0.0.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cf6d41036e753e1054ea90158219cc5030caaff6af8ce1036b546d7ed0ce25ca"
+      sha256 "a05bd4ae1714c30a11fa5d289ac9c79fb6e130717907e8e394d6d8a5f777980c"
 
       def install
         bin.install "runetaled"
@@ -19,7 +19,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/runetale/runetale/releases/download/v0.0.1/runetaled_0.0.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9f710c6935a81e3b667c102214b4ea5ed072ac313b56d994bd32d498fa0c9a02"
+      sha256 "315dae01e44d943dfaa699f4cad187df4e6f1fb61a297c0d425e1ed2179b34f9"
 
       def install
         bin.install "runetaled"
@@ -30,7 +30,7 @@ class Runetaled < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.1/runetaled_0.0.1_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "4ec587b4ed1c0de2690f4fa15bfd8bb49fa43faad6d25907f21785f660fd1144"
+      sha256 "e24a3879603f940dc4bfa83d209e284bf24eb5dfc6eeb6a74d7daba6ed3f779f"
 
       def install
         bin.install "runetaled"
@@ -38,7 +38,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.1/runetaled_0.0.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "077c08d3cc913bfb37687e5f51481d2cff4195cbb97f167b4d4ffd6a4886ffd1"
+      sha256 "34d19598bb9b26544d3b3e063ab9b8d2c1043a317882dfb204aacbfeee8aa009"
 
       def install
         bin.install "runetaled"
@@ -46,7 +46,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.1/runetaled_0.0.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1a9cd3f6a7497ea245f3fcd912b7752f2b84e0c315d22d532cd6bd975c6c1eaf"
+      sha256 "6a0c474862ff6b343c3f4cb55effd6b12822864e07d55ca00f4691c74183208a"
 
       def install
         bin.install "runetaled"
