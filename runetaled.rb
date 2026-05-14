@@ -11,7 +11,7 @@ class Runetaled < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.7-hennge-dev/runetaled_0.0.7-hennge-dev_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6d488dddcaa0552f6a704745b8995463fae2950bf0345c194be8cb2b30fda4c0"
+      sha256 "651a5d8d9059168f8039ac5b12c9353592d5ac618c91bd7d912628ec056ae9b9"
 
       def install
         bin.install "runetaled"
@@ -19,7 +19,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/runetale/runetale/releases/download/v0.0.7-hennge-dev/runetaled_0.0.7-hennge-dev_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "55aff2cbeb33f84df47a6dcd5f57f22ddafe4935c6981f000a11c48942630693"
+      sha256 "bf59c9ebe7037f0100fdaaae5be6a0ea6e34c17fac2ae32559bba1e7a59562e6"
 
       def install
         bin.install "runetaled"
@@ -30,7 +30,7 @@ class Runetaled < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.7-hennge-dev/runetaled_0.0.7-hennge-dev_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "5de564eeec9d5b35acf1636dbc56502093651b83df87cb509dbb0d496253e815"
+      sha256 "c9323967e61ff8541fadc3476a20622b71871b5633b4fa98f8c7bad4e969c40d"
 
       def install
         bin.install "runetaled"
@@ -38,7 +38,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.7-hennge-dev/runetaled_0.0.7-hennge-dev_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "147defc014deea1d40f86fb1255c164c17e33ceec8956f76d26a975b3bad0c0c"
+      sha256 "dd729f12870b341fb8cddaadd7a6f99c4047a137494e02a5619558c1255447d4"
 
       def install
         bin.install "runetaled"
@@ -46,7 +46,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.7-hennge-dev/runetaled_0.0.7-hennge-dev_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0fe2b3431f2715661a6f6497d0bb2fe7d552ea39e869caa47f8444f581836897"
+      sha256 "fd9eee4d2f8776e71adf5c1e16be3214ae4e86da83aed087dad22d3b6d0878da"
 
       def install
         bin.install "runetaled"
