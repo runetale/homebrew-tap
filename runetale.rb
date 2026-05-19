@@ -9,17 +9,17 @@ class Runetale < Formula
   license "BSD3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "dea1c1dd92af148551398ad8b868035b83d153a8a1e68e69688a3dcd58e77c62"
+    if Hardware::CPU.arm?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c0d94902f23334c2ce812532890e4bc133db6f318502bbb42c4f10de2e277f59"
 
       def install
         bin.install "runetale"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "18769d1fe5ca1f75f79a72edfc8da500c816ddf39c3679d1599e99bbc4a7bda2"
+    if Hardware::CPU.intel?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e21fdb57ff83545df340da2e42d2c1bac7fae0ae95ec4222a96cf38f4a60ea49"
 
       def install
         bin.install "runetale"
@@ -28,17 +28,9 @@ class Runetale < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6b63728a7471cd069dc8aeb7fcd488848b7922619c5c5bf07bfde72bdf212af4"
-
-      def install
-        bin.install "runetale"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "7869a9757f7e28531a5739f323a2558726e48812f73cb40a8302106576ca59ef"
+      sha256 "7dc8fd2493a652034c115ee4eceb2d232aabd8bf63ccee080b14488aeb94981b"
 
       def install
         bin.install "runetale"
@@ -46,7 +38,15 @@ class Runetale < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c26583365cfe978357dd4858d2ba212bf342abdc16b492d85eee5a4a417fd88f"
+      sha256 "ac2837a4507e55e088884ba28dcec05820061f90eb9d2cc8a10d3ce850ed739b"
+
+      def install
+        bin.install "runetale"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "47aab4bc1de02cd86c5ec9c161c85791f666cbb7920b35e033f690f199beb1cf"
 
       def install
         bin.install "runetale"
