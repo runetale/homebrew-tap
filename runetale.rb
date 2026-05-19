@@ -5,21 +5,21 @@
 class Runetale < Formula
   desc "P2P mesh network using WireGuard"
   homepage "https://runetale.com/"
-  version "0.0.4"
+  version "0.0.9-hennge-dev"
   license "BSD3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c0d94902f23334c2ce812532890e4bc133db6f318502bbb42c4f10de2e277f59"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-dev/runetale_0.0.9-hennge-dev_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6b9f5a7bfb9a06cd4c8f1f951ba7d98997bfda15c48cce3be1218d038df834e4"
 
       def install
         bin.install "runetale"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e21fdb57ff83545df340da2e42d2c1bac7fae0ae95ec4222a96cf38f4a60ea49"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-dev/runetale_0.0.9-hennge-dev_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a79b8e83a1a02fb2695df81346bf08762c620a62506cd2d0c2808fb97e7a2a3f"
 
       def install
         bin.install "runetale"
@@ -29,24 +29,24 @@ class Runetale < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "7dc8fd2493a652034c115ee4eceb2d232aabd8bf63ccee080b14488aeb94981b"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-dev/runetale_0.0.9-hennge-dev_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "cf87e3fbff547dc6ba018c278d18c0b1393832bb57ef34414763a1d2ee06102f"
 
       def install
         bin.install "runetale"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ac2837a4507e55e088884ba28dcec05820061f90eb9d2cc8a10d3ce850ed739b"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-dev/runetale_0.0.9-hennge-dev_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "3eea43e884046bef693f963a7e20062b18997ce2d849b6555efe754b69b2b3ad"
 
       def install
         bin.install "runetale"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.4/runetale_0.0.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "47aab4bc1de02cd86c5ec9c161c85791f666cbb7920b35e033f690f199beb1cf"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-dev/runetale_0.0.9-hennge-dev_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "903f6a101bb230e8c3e14655ab64668e15b63c142365de0a66ebbc4f4b8d94c6"
 
       def install
         bin.install "runetale"
