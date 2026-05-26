@@ -5,21 +5,21 @@
 class Runetaled < Formula
   desc "p2p mesh network"
   homepage "https://runetale.com/"
-  version "0.0.9-hennge-stg"
+  version "0.0.10-hennge-stg"
   license "BSD3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-stg/runetaled_0.0.9-hennge-stg_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6c6189a8d4706b3d786566966bda882e1593f512f7dbd232ffc2c9e88457f340"
+    if Hardware::CPU.intel?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.10-hennge-stg/runetaled_0.0.10-hennge-stg_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ac5bf4e5e48fa1c32507cf0855f969d47ff4b99788b20b19b6915545a1ad73fc"
 
       def install
         bin.install "runetaled"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-stg/runetaled_0.0.9-hennge-stg_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4a09fe50653f13527647f45ef5c3f8835e50f788e799558bdc2793d4be7a5dbd"
+    if Hardware::CPU.arm?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.10-hennge-stg/runetaled_0.0.10-hennge-stg_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "286778cc25445eb60921fbe012f02c79fd2130aea818fdf802ff0c458065ab6d"
 
       def install
         bin.install "runetaled"
@@ -29,24 +29,24 @@ class Runetaled < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-stg/runetaled_0.0.9-hennge-stg_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "1af51f411435beab3aa6f4d62acfdc327b3e18d15f74e0a40070397ed510b8be"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.10-hennge-stg/runetaled_0.0.10-hennge-stg_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "2f3aeac5f4d2a1dd8763f708775dd77098311371cf8eb0cec0ce1d7cf71d4ee4"
 
       def install
         bin.install "runetaled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-stg/runetaled_0.0.9-hennge-stg_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1e2384307047ca1fd75adb3ab869a11abd55ace737f3bce9a630ae69b869a23a"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.10-hennge-stg/runetaled_0.0.10-hennge-stg_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ec38b9a5e17530328149c7187a9213f6ccc226f049d733621a23b3d513b1dd4e"
 
       def install
         bin.install "runetaled"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.9-hennge-stg/runetaled_0.0.9-hennge-stg_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "32aca3fd8a0c56fb92386d55c4816bd2e6758289dc5242d2b37fd25e9a27ad7e"
+      url "https://github.com/runetale/runetale/releases/download/v0.0.10-hennge-stg/runetaled_0.0.10-hennge-stg_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "234ebf09162fe8e4d9c94224c1dea2a120489c4deab28faf768756bdf2f0c13c"
 
       def install
         bin.install "runetaled"
