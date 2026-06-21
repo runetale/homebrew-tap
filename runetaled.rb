@@ -11,7 +11,7 @@ class Runetaled < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e8be2b3caaa17d30d098965f3dde17bb9e3616acbe50a0378fb8eae351279294"
+      sha256 "f4be7c929150e489876de2af48a579ead3087ecfd05db65b03b5adc305f8bb2a"
 
       def install
         bin.install "runetaled"
@@ -19,7 +19,7 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ab62d3e3f56615f04199e5e62ef8ba8070d67863c1a053cb6d57bcbd0b72e6a8"
+      sha256 "b917b0ca931e3da03a2798063929b50f3385061ed8fe7442b359cbb8fc9d4f8f"
 
       def install
         bin.install "runetaled"
@@ -30,15 +30,7 @@ class Runetaled < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6598420d14f7586e6c15bbce425eabefbbde87a1f66f8c90aba0d5ccacd42f6c"
-
-      def install
-        bin.install "runetaled"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0bdc974f1d90389953695ae8c027cbc5a415e089d437ee0843b5c248dd55ff9a"
+      sha256 "89374d4c6cc8ca336a1cb19ee4e53c45319b8d3e8e3880accf904294985b56dd"
 
       def install
         bin.install "runetaled"
@@ -46,7 +38,15 @@ class Runetaled < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "cb0237c20403699759573602053f982f1a433885f8c83bd28743410a454458e9"
+      sha256 "c19e966ebee5770aec096956a1d05db966b37fc8f55d85f94fffb8255d13a9d8"
+
+      def install
+        bin.install "runetaled"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/runetale/runetale/releases/download/v0.0.14-hennge-dev/runetaled_0.0.14-hennge-dev_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ea96316a6b76a8194c48f34c4e40967fad20ffd0256a08430f84aae5684cb51f"
 
       def install
         bin.install "runetaled"
