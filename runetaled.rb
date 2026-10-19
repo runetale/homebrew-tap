@@ -5,21 +5,21 @@
 class Runetaled < Formula
   desc "p2p mesh network"
   homepage "https://runetale.com/"
-  version "1.0.4"
+  version "1.0.5"
   license "BSD3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/runetale/runetale/releases/download/v1.0.4/runetaled_1.0.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a6c7156b4c32fa722e9211f45843f6091bb0c64637053ecbc68297b828773e96"
+    if Hardware::CPU.intel?
+      url "https://github.com/runetale/runetale/releases/download/v1.0.5/runetaled_1.0.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f7e1d27b9dfc95ac02454fe49d0152f80201fc0d02600bea830e809a6ddfc435"
 
       def install
         bin.install "runetaled"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v1.0.4/runetaled_1.0.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "10bdb42795f34572031dbb18deb647645db7b62589b5f036b5e254f60d70ee96"
+    if Hardware::CPU.arm?
+      url "https://github.com/runetale/runetale/releases/download/v1.0.5/runetaled_1.0.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2d21d753790920828dbbc47698c00bebc9a7daa417e0bf861123ff3ded06c212"
 
       def install
         bin.install "runetaled"
@@ -28,25 +28,25 @@ class Runetaled < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v1.0.4/runetaled_1.0.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4d5d546da3ef2c20f49c13af69fd58c4b7c6e79f494bcf5453277d3306497dd3"
-
-      def install
-        bin.install "runetaled"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/runetale/runetale/releases/download/v1.0.4/runetaled_1.0.4_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "de7c4ce9512d8d2aa8ce488eb00b40100d757ea0b974b66be4d7d9859f536e4f"
+      url "https://github.com/runetale/runetale/releases/download/v1.0.5/runetaled_1.0.5_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "739881cbaabc863034cf95af67f53ea3d0bfed6fdf1833ecd6475cfb2a14c5ec"
 
       def install
         bin.install "runetaled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runetale/runetale/releases/download/v1.0.4/runetaled_1.0.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8197a2781dc74dab47e2483508ffee6d47261477381abe62a233fd3dc6e37b01"
+      url "https://github.com/runetale/runetale/releases/download/v1.0.5/runetaled_1.0.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "dd4c7bf6026f7a77805146dc7ec182d9f6c6b1e1ea89a33834aa8e433adc7d88"
+
+      def install
+        bin.install "runetaled"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/runetale/runetale/releases/download/v1.0.5/runetaled_1.0.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6506c9aa93012401c7b086cd298f3650c17210a58a4b6674bba05af09444b9ef"
 
       def install
         bin.install "runetaled"
